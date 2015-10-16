@@ -1,5 +1,13 @@
 [![Build Status](https://travis-ci.org/spark/firmware.svg?branch=develop)](https://travis-ci.org/spark/firmware)
 
+# OSC Firmware for Core and Photon
+
+This integrates oscduino library into photon firmware/user. 
+Replaces application.cpp with local-only {(NO PARTICLE CLOUD)} program.
+Compile and upload according to particle firmware example (https://github.com/spark/firmware/blob/develop/docs/gettingstarted.md)
+
+Robert
+
 # Particle Firmware for the Core and Photon
 
 This is the main source code repository of the Particle firmware libraries.
