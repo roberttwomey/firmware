@@ -1,8 +1,8 @@
 /**
  ******************************************************************************
- * @file    system_dynalib.h
- * @authors Matthew McGowan
- * @date    12 February 2015
+ * @file    application.cpp
+ * @authors mat
+ * @date    21 January 2015
  ******************************************************************************
   Copyright (c) 2015 Particle Industries, Inc.  All rights reserved.
 
@@ -21,37 +21,7 @@
  ******************************************************************************
  */
 
-#ifndef SYSTEM_DYNALIB_H
-#define	SYSTEM_DYNALIB_H
+#include "application.h"
+#include "unit-test/unit-test.h"
 
-#include "dynalib.h"
-
-#ifdef DYNALIB_EXPORT
-#include "system_mode.h"
-#include "system_sleep.h"
-#include "system_task.h"
-#include "system_update.h"
-#include "system_event.h"
-#endif
-
-DYNALIB_BEGIN(system)
-DYNALIB_FN(system, system_mode)
-DYNALIB_FN(system, set_system_mode)
-
-DYNALIB_FN(system, set_ymodem_serial_flash_update_handler)
-DYNALIB_FN(system, system_firmwareUpdate)
-DYNALIB_FN(system, system_fileTransfer)
-
-DYNALIB_FN(system, system_delay_ms)
-DYNALIB_FN(system, system_sleep)
-DYNALIB_FN(system, system_sleep_pin)
-DYNALIB_FN(system, system_subscribe_event)
-DYNALIB_FN(system, system_unsubscribe_event)
-DYNALIB_FN(system, system_button_pushed_duration)
-DYNALIB_FN(system, system_thread_set_state)
-DYNALIB_FN(system, system_internal)
-DYNALIB_END(system)
-
-
-#endif	/* SYSTEM_DYNALIB_H */
-
+UNIT_TEST_APP();
